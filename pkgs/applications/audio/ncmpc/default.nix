@@ -32,6 +32,7 @@ stdenv.mkDerivation rec {
   mesonFlags = [
     "-Dlirc=disabled"
     "-Ddocumentation=disabled"
+    "-Dchat_screen=true"
   ] ++ lib.optional (!pcreSupport) "-Dregex=disabled";
 
   meta = with lib; {
